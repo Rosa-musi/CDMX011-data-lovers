@@ -1,9 +1,18 @@
 // estas funciones son de ejemplo
-import data from './data/ghibli/ghibli.js'
-export const ghibliMovies = data.films.map(data => [`${data.title} ${data.poster} ${data.description}`]);
 
-  
-//};
+export const maping = (data) => {
+  let posters2 = []
+
+  data.films.forEach(movie => {
+      posters2 += `
+        <div class="card_film">
+            <img src=${movie.poster}>
+            <h2>${movie.title}</h2>
+        </div>
+      `
+  })
+  return posters2
+};
 
 export const anotherExample = () => {
   return 'OMG';
