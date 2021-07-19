@@ -10,7 +10,7 @@ const home_button = document.getElementById('home_button')
 
 
 home_button.addEventListener('click', () => {
-    home.style.display = "flex";
+    home.style.display = "block";
     films.style.display = "none";
 })
 
