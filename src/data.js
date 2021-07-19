@@ -15,7 +15,7 @@ export const maping = (data) => {
 };
 
 
-export const AlphabeticalOrderSort = (data) => {
+export const alphabeticalSort = (data) => {
   let result = data.films.sort((a, b) => {
     const titleA = a.title.toLowerCase()
     const titleB = b.title.toLowerCase()
@@ -31,9 +31,15 @@ export const AlphabeticalOrderSort = (data) => {
   return result
 } 
 
-export const sortData = (data ) => {
+export const sortDataAs = (data ) => {
    const sortRelease = data.films.sort((a,b) => (a.release_date > b.release_date ? 1 : -1)); 
   return sortRelease;
   
+} 
+
+export const sortDataDes = (data ) => {
+  const sortRelease = data.films.sort((a,b) => (a.release_date < b.release_date ? 1 : -1)); 
+ return sortRelease;
+ 
 } 
   

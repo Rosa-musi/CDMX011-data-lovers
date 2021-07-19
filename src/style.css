@@ -35,8 +35,20 @@ h1{
     display:none;    
     flex-wrap: wrap;
     justify-content:space-evenly;
-    text-align: center; 
-       
+    text-align: center;       
+}
+
+.sortContainer {
+    position: relative;
+}
+
+.sortOptions_content {
+    display: none;
+    position: absolute;
+}
+
+.sortOptions_content a {
+    color: #000;
 }
 
 .aboutText{

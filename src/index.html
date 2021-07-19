@@ -13,8 +13,8 @@
       <h1>Ghibli World</h1>
       <nav>
         <ul class="menu">
-          <li><a  href="#" class="home_button">Home</a></li>
-          <li><a href="#" class="movies_button">Filmography</a></li>
+          <li><a  href="#" id="home_button" class="home_button">Home</a></li>
+          <li><a href="#" id="movies_button" class="movies_button">Filmography</a></li>
           <li><a href="#">Characters</a></li>
         </ul>
       </nav>
@@ -24,11 +24,16 @@
         <h2 class="aboutTitle">About Studio Ghibli</h2>
         <p class="aboutText">It is a Japanese animation film studio headquartered in Koganei, Tokyo. Founded in 1985 by animators and directors Miyazaki Hayao and Takahata Isao and producer Suzuki Toshio. Studio Ghibli is known for the high quality of its filmmaking and its artistry. Its feature films won both critical and popular praise and influenced other animation studios.</p>
       </div>
-      <div class= "films" id ="films">
-        <div id="description">
-          Descripción de la película
-          <span id="movieData"></span>
-        </div> 
+      <div class="film_container">
+        <div class="sortContainer">
+          <button id="sortButton" >Sort by</button>
+          <div id="sortOptions" class="sortOptions_content">
+            <a id="ascendente" href="#">Ascendente</a>
+            <a id="descendente" href="#">Descendente</a>
+            <a id="ordenAlfabetico" href="#">Orden alfabético</a>
+          </div>
+        </div>
+        <div class="films" id ="films"></div>
       </div>      
     </main>
     <footer>      
