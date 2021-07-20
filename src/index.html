@@ -6,15 +6,16 @@
     <link rel="stylesheet" href="style.css" /> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gayathri&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Gayathri&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/e5cb28d452.js" crossorigin="anonymous"></script>   
   </head>
   <body>
     <header> 
       <h1>Ghibli World</h1>
       <nav>
         <ul class="menu">
-          <li><a  href="#" class="home_button">Home</a></li>
-          <li><a href="#" class="movies_button">Filmography</a></li>
+          <li><a  href="#" class="home_button" id= "home_button">Home</a></li>
+          <li><a href="#" class="movies_button" id= "movies_button">Filmography</a></li>
           <li><a href="#">Characters</a></li>
         </ul>
       </nav>
@@ -24,17 +25,25 @@
         <h2 class="aboutTitle">About Studio Ghibli</h2>
         <p class="aboutText">It is a Japanese animation film studio headquartered in Koganei, Tokyo. Founded in 1985 by animators and directors Miyazaki Hayao and Takahata Isao and producer Suzuki Toshio. Studio Ghibli is known for the high quality of its filmmaking and its artistry. Its feature films won both critical and popular praise and influenced other animation studios.</p>
       </div>
-      <div class= "films" id ="films">
-        <div id="description">
-          Descripción de la película
-          <span id="movieData"></span>
-        </div> 
+      <div class = "secondPage">
+        <div class = "selector" id = "selector">
+          <label>Sort movies by:
+          <select name="sortMovies" class="sortMovies">
+            <option selected disabled>Choose sort order</option>
+            <option value="alphabetic">Alphabetic Order</option>
+            <option value="releaseAscending">Release Date (Ascending)</option>
+            <option value="releaseDescending">Release Date (Descending)</option>
+            <option value="score">Worst to Best rated</option>
+          </select> 
+          </label>
+        </div>
+        <div  class= "films" id ="films"></div> 
       </div>      
     </main>
     <footer>      
-      <p class="website"><a href="https://www.ghibli.jp/">Studio Ghibli's Official Website</a></p>
-      <p class="website"><a href="https://twitter.com/JP_GHIBLI">Studio Ghibli's official Twitter account</a></p>
-      <p class="website"><a href="https://www.ghibli-museum.jp">Studio Ghibli Museum</a></p>
+      <p class="website"><a href="https://www.ghibli.jp/" target="_blank">Studio Ghibli's Official Website</a></p>
+      <p class="twitter"><a href="https://twitter.com/JP_GHIBLI" target="_blank"><i class="fab fa-twitter-square" style="color: #098ED6"></i></a></p>
+      <p class="website"><a href="https://www.ghibli-museum.jp" target="_blank">Studio Ghibli Museum</a></p>
     </footer> 
     <div id="root"></div>
     <script src="main.js" type="module"></script>
