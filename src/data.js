@@ -10,8 +10,10 @@ export const maping = (data) => {
           <img src=${movie.poster} class = "posterimg" alt="${movie.title}">
         </div>
         <h2>${movie.title}</h2>
-        <h3 class="releaseDate"> Release date: ${movie.release_date} </h3>
-        <span class = "rate"> Score: ${movie.rt_score}</span>  
+        <div class ="movieDate">
+          <p class="releaseDate"> Release date: <br> <span>${movie.release_date}</span></p>         
+          <p class = "rate"> Score: <br> <span>${movie.rt_score}</span></p>
+        </div>
         <div class= "movie_info">
           <p class="director"> Director: ${movie.director} </p>
           <p class="producer"> Producer: ${movie.producer} </p>
