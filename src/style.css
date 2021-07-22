@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+
+body{
+    background-color: #E9EFDE;
+}
+
+.haederContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    margin: 25px;
+}
+
+h1{
+    color: #0D566D;      
+    font-family: 'Gayathri', sans-serif;
+    font-size: 80px;
+    height: 80px;
+    padding: 25px;
+}
+
+.menu{
+    display: flex;    
+    justify-content:space-evenly;    
+    background-color: #C28800;
+    padding: 1vw;        
+    font-family: 'Gayathri', sans-serif;    
+    color: #F9FFED;
+    font-size: 3vw;
+    list-style: none;
+}
+.menu a {
+    color: #F9FFED;    
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #E9EFDE;
+    width: 100%;
+    height: auto;
+}
+
+ .aboutDescription {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     margin-top: 100px;
+     width: 100%;
+ }
+
+.aboutTitle{    
+    color: #0D566D;    
+    font-family: 'Gayathri', sans-serif; 
+    font-size: 50px;
+    height: 50px;
+}
+
+.aboutText{
+    font-family: 'Gayathri', sans-serif;
+    font-size: 15px;
+    margin: 40px 50px 0;
+}
+
+.home img {
+    margin-bottom: 100px;
+    
+}
+
+/* Filmography */
+
+.films{
+    display: none;    
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    text-align: center; 
+}
+
+.selector {
+    display: none;
+    font-family: 'Gayathri', sans-serif;
+    color: #0D566D;
+    font-size: 30px; 
+    justify-content:space-around;   
+}
+
+.sortMovies{
+    box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2);
+    font-family: 'Gayathri', sans-serif;
+    font-size: 1.5vw;
+}
+
+
+.card_film {
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    margin: 2vw;
+    font-family: 'Gayathri', sans-serif;
+    width: 22%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.posterContainer {
+    height: 30vW;
+    width: 20vW;
+}
+
+.card_film img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movieDate{
+    display: flex;
+    flex-direction: row;
+    width: 100%;    
+    align-items: center;
+    justify-content:space-around;
+    
+}
+
+.movieDate span{
+    font-weight: bolder;
+}
+
+.movie_info {
+    flex-direction: column;
+    position: absolute;
+    display: none;
+    width: 100%;    
+    height: 100%;
+    padding: 3%;
+    bottom: 0;
+    transition: transform 0.7s ease-in;
+    background-color: #E9EFDE;
+    transform: translateY(101%);
+
+}
+
+.card_film:hover .movie_info{
+    display: flex;
+    transform: translateY(0);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+}
+footer{
+    display:flex;    
+    justify-content:space-around;
+    text-align: center;  
+    height: 150px;
+}
+footer a {
+    color: #F9FFED;
+}
+.website{
+    font-family: 'Gayathri', sans-serif;
+    text-decoration: none;
+    background-color: #098ED6;     
+    padding-top: 0.8vw;
+    font-size: 1.5vw;   
+    height: 2vw; 
+}
+i{
+    font-size: 3vw;    
+    height: 2vw; 
+}
+
+
+
+/* For device width 990px and larger: */
+@media only screen and (min-device-width: 990px) {
+    .haederContainer{
+        margin: 0;
+    }
+    .home{
+    width: 100%;
+    background-image: url("https://i.ibb.co/TDQZk6p/Fondo-Totoro.jpg");
+    background-size: cover;
+    height: 700px;
+}
+
+.aboutDescription {
+    align-self: flex-start;
+    width: 60%;
+}
+
+.aboutText{
+    font-size: 25px;
+}
+
+.home img {
+    display: none;
+}
+
+}
