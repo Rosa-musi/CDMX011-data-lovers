@@ -7,7 +7,7 @@ export const maping = (data) => {
       posters2 += `
       <div class="card_film">
         <div class="posterContainer">
-          <img src=${movie.poster} class = "posterimg" alt="${movie.title}">
+          <img src=${movie.poster} class= "posterimg" alt="${movie.title}">
         </div>
         <h2>${movie.title}</h2>
         <div class ="movieDate">
@@ -35,3 +35,7 @@ export const sortAphabetic = (data) => data.sort((a,b) => a.title > b.title ? 1 
 const sortRate = (data) => data.sort((a, b) => a.rt_score - b.rt_score);
 export const sortWorst = (data) => sortRate(data);
 
+export const filterData = (data, option) => {
+  const filterDirector = data.filter((movie => movie.director === option));
+  return filterDirector;
+}

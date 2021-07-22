@@ -1,19 +1,30 @@
-*{
-    text-decoration: none;    
+* {
+    margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
 }
+
 body{
     background-color: #E9EFDE;
 }
-h1{
+
+.haederContainer {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: fit-content;
+    margin: 25px;
+}
+
+h1{
     color: #0D566D;      
     font-family: 'Gayathri', sans-serif;
-    height: 2vw;
-    margin-bottom: 0vw;
-    font-size: 5vw;
+    font-size: 80px;
+    height: 80px;
+    padding: 25px;
 }
+
 .menu{
     display: flex;    
     justify-content:space-evenly;    
@@ -27,33 +38,57 @@ h1{
 .menu a {
     color: #F9FFED;    
 }
-.films{
-    display:none;    
-    flex-wrap: wrap;
-    justify-content:space-evenly;
-    text-align: center; 
+
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #E9EFDE;
+    width: 100%;
+    height: auto;
 }
-.aboutText{
-    font-family: 'Gayathri', sans-serif;    
-    margin-top: 10vw;    
-    text-align: center;     
-}
+
+ .aboutDescription {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     margin-top: 100px;
+     width: 100%;
+ }
+
 .aboutTitle{    
     color: #0D566D;    
     font-family: 'Gayathri', sans-serif; 
-    text-align: center;  
+    font-size: 50px;
+    height: 50px;
 }
-.home{
-    width: 90%;    
-    background-color: #E9EFDE;
-    background-size: cover;
+
+.aboutText{
+    font-family: 'Gayathri', sans-serif;
+    font-size: 15px;
+    margin: 40px 50px 0;
+}
+
+.home img {
+    margin-bottom: 100px;
+    
+}
+
+/* Filmography */
+
+.films{
+    display: none;    
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    text-align: center; 
 }
 
 .selector {
     display: none;
     font-family: 'Gayathri', sans-serif;
     color: #0D566D;
-    font-size: 1.5vw; 
+    font-size: 30px; 
     justify-content:space-around;   
 }
 
@@ -119,37 +154,11 @@ h1{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 
 }
-
-
-
-
-/* For device width 990px and larger: */
-@media only screen and (min-device-width: 990px) {
-.home{
-    width: 100%;
-    height: 700px;
-    background-image: url("https://i.ibb.co/TDQZk6p/Fondo-Totoro.jpg");
-    background-size: cover;
-}
-.aboutText{
-    font-family: 'Gayathri', sans-serif;
-    font-size: 2vw;
-    width: 50vw;
-    margin-top: 15vw; 
-    text-align: left;      
-}
-.aboutTitle{    
-    color: #0D566D;
-    font-size: 3.5vw;
-    font-family: 'Gayathri', sans-serif; 
-    margin-left: 8vw; 
-    text-align: left;     
-}
-}
 footer{
     display:flex;    
     justify-content:space-around;
     text-align: center;  
+    height: 150px;
 }
 footer a {
     color: #F9FFED;
@@ -165,4 +174,33 @@ footer a {
 i{
     font-size: 3vw;    
     height: 2vw; 
+}
+
+
+
+/* For device width 990px and larger: */
+@media only screen and (min-device-width: 990px) {
+    .haederContainer{
+        margin: 0;
+    }
+    .home{
+    width: 100%;
+    background-image: url("https://i.ibb.co/TDQZk6p/Fondo-Totoro.jpg");
+    background-size: cover;
+    height: 700px;
+}
+
+.aboutDescription {
+    align-self: flex-start;
+    width: 60%;
+}
+
+.aboutText{
+    font-size: 25px;
+}
+
+.home img {
+    display: none;
+}
+
 }
