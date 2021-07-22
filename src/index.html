@@ -11,7 +11,9 @@
   </head>
   <body>
     <header> 
-      <h1>Ghibli World</h1>
+      <div class="haederContainer">
+        <h1>Ghibli World</h1>
+      </div>
       <nav>
         <ul class="menu">
           <li><a  href="#" class="home_button" id= "home_button">Home</a></li>
@@ -22,10 +24,13 @@
     </header>
     <main>
       <div class="home" id="home">
-        <h2 class="aboutTitle">About Studio Ghibli</h2>
-        <p class="aboutText">It is a Japanese animation film studio headquartered in Koganei, Tokyo. Founded in 1985 by animators and directors Miyazaki Hayao and Takahata Isao and producer Suzuki Toshio. Studio Ghibli is known for the high quality of its filmmaking and its artistry. Its feature films won both critical and popular praise and influenced other animation studios.</p>
+        <div class="aboutDescription">
+          <h2 class="aboutTitle">About Studio Ghibli</h2>
+          <p class="aboutText">It is a Japanese animation film studio headquartered in Koganei, Tokyo. Founded in 1985 by animators and directors Miyazaki Hayao and Takahata Isao and producer Suzuki Toshio. Studio Ghibli is known for the high quality of its filmmaking and its artistry. Its feature films won both critical and popular praise and influenced other animation studios.</p>
+        </div>
+        <img src="https://i.ibb.co/Z6pC2gS/pngwing-com.png" alt="Totoro and friends" border="0">
       </div>
-      <div class = "secondPage">
+      <div class= "secondPage">
         <div class = "selector" id = "selector">
           <label>Sort movies by:
           <select name="sortMovies" class="sortMovies">
@@ -35,7 +40,19 @@
             <option value="releaseDescending">Release Date (Descending)</option>
             <option value="score">Worst to Best rated</option>
           </select> 
-          </label>          
+          </label>      
+          <label>Filter by film director:
+            <select name="filterMovies" class="filterMovies">
+              <option selected disabled>Choose a film director</option>
+              <option value="all">All</option>
+              <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+              <option value="Isao Takahata">Isao Takahata</option>
+              <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
+              <option value="Hiroyuki Morita">Hiroyuki Morita</option>
+              <option value="Gorō Miyazaki">Gorō Miyazaki</option>
+              <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
+            </select> 
+          </label>   
         </div>
         <div  class= "films" id ="films"></div> 
       </div>      

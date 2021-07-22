@@ -1,10 +1,11 @@
-import { maping, sortAscending, sortDescending, sortAphabetic, sortWorst } from './data.js';
+import { maping, sortAscending, sortDescending, sortAphabetic, sortWorst, filterData } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/ghibli/ghibli.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
-var films = document.getElementById('films')
+let films = document.getElementById('films')
 let data_films = data.films
+let filterSort = data_films
 const movies_button = document.getElementById('movies_button');
 const home = document.getElementById('home')
 const home_button = document.getElementById('home_button')
@@ -31,26 +32,40 @@ movies_button.addEventListener('click', () => {
 
 
 
+
+
+
 const sortSelect = document.querySelector('.sortMovies')
 sortSelect.addEventListener('change', (e) => {
     if (e.target.value === "alphabetic"){
-        let sort = sortAphabetic(data_films)
-        let sorted = maping(sort)
-        films.innerHTML = sorted
+        let sort = sortAphabetic(filterSort)
+        let printMovies = maping(sort)
+        films.innerHTML = printMovies
     } else if (e.target.value === "releaseAscending"){
-        let sort = sortAscending(data_films)
-        let sorted = maping(sort)
-        films.innerHTML = sorted
+        let sort = sortAscending(filterSort)
+        let printMovies = maping(sort)
+        films.innerHTML = printMovies
     } else if (e.target.value === "releaseDescending"){
-        let sort = sortDescending(data_films)
-        let sorted = maping(sort)
-        films.innerHTML = sorted
+        let sort = sortDescending(filterSort)
+        let printMovies = maping(sort)
+        films.innerHTML = printMovies
     } else if (e.target.value === "score") {
-        let sort = sortWorst(data_films)
-        let sorted = maping(sort)
-        films.innerHTML = sorted
+        let sort = sortWorst(filterSort)
+        let printMovies = maping(sort)
+        films.innerHTML = printMovies
+        
     }
 })
 
-
+const filterSelect = document.querySelector('.filterMovies')
+filterSelect.addEventListener('change', (event) => {
+    if(event.target.value != "all"){        
+        filterSort = filterData(data_films, event.target.value)
+        let filtered = maping(filterSort)
+        films.innerHTML = filtered
+    } else {
+        filterSort = data_films
+        films.innerHTML = maping(filterSort)
+    }
+})
 
