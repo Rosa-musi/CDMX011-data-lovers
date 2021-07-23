@@ -7,7 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gayathri&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/71936a9880.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/e5cb28d452.js" crossorigin="anonymous"></script>   
+    
   </head>
   <body>
     <header> 
@@ -15,11 +17,14 @@
         <h1>Ghibli World</h1>
       </div>
       <nav>
-        <ul class="menu">
-          <li><a  href="#" class="home_button" id= "home_button">Home</a></li>
-          <li><a href="#" class="movies_button" id= "movies_button">Filmography</a></li>
-          <li><a href="#">Characters</a></li>
-        </ul>
+        <div class="menuContainer">
+          <a href="#" class="menuHamburguesa" id="menuHamburguesa"><i class="fa fa-bars" aria-hidden="true"></i></a>
+          <ul class="menu" id="menu">
+            <li><a  href="#" class="home_button" id= "home_button">Home</a></li>
+            <li><a href="#" class="movies_button" id= "movies_button">Filmography</a></li>
+            <li><a href="#" class="characters_button" id="characters_button">Characters</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main>
@@ -55,7 +60,12 @@
           </label>   
         </div>
         <div  class= "films" id ="films"></div> 
-      </div>      
+      </div>    
+      <div class="thirdPage">
+        <div class="characters" id="characters">
+
+        </div>
+      </div>  
     </main>
     <footer>      
       <p class="website"><a href="https://www.ghibli.jp/" target="_blank">Studio Ghibli's Official Website</a></p>
