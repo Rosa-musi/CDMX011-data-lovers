@@ -1,4 +1,4 @@
-import { maping, sortAscending, sortDescending, sortAphabetic, sortWorst, filterData } from './data.js';
+import { maping, sortAscending, sortDescending, sortAphabetic, sortWorst, filterData, peopleArray, charactersCard } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/ghibli/ghibli.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -10,14 +10,23 @@ const movies_button = document.getElementById('movies_button');
 const home = document.getElementById('home')
 const home_button = document.getElementById('home_button')
 const selector = document.getElementById('selector')
+const characters = document.getElementById('characters')
+const characters_button = document.getElementById('characters_button')
+const menuHamburguesa = document.getElementById('menuHamburguesa')
+const menu = document.getElementById('menu')
 
 
+
+menuHamburguesa.addEventListener('click', () =>{
+    menu.classList.toggle('activated')
+})
 
 
 home_button.addEventListener('click', () => {
-    home.style.display = "block";
+    home.style.display = "flex";
     films.style.display = "none";
     selector.style.display = "none";
+    characters.style.display = "none"
 })
 
 
@@ -28,11 +37,8 @@ movies_button.addEventListener('click', () => {
     home.style.display = "none";
     films.style.display = "flex";
     selector.style.display = "flex";
+    characters.style.display = "none"
 })
-
-
-
-
 
 
 const sortSelect = document.querySelector('.sortMovies')
@@ -69,3 +75,12 @@ filterSelect.addEventListener('change', (event) => {
     }
 })
 
+characters_button.addEventListener('click', () => {
+    home.style.display = "none";
+    films.style.display = "none";
+    selector.style.display = "none";
+    characters.style.display = "flex"
+    let arrayPeople = peopleArray(data_films)
+    let charactersPrint = charactersCard(arrayPeople)
+    characters.innerHTML = charactersPrint
+})
