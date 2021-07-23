@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
 * {
     margin: 0;
 	padding: 0;
@@ -15,6 +17,7 @@ body{
     align-items: center;
     height: fit-content;
     margin: 25px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .haederContainer h1{
@@ -303,7 +306,5 @@ i{
 
     .card_film {
         width: 400px;
-    }  
-
-
+    }
 }
