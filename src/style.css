@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gayathri:wght@100&display=swap');
 
 * {
     margin: 0;
@@ -16,7 +16,6 @@ body{
     justify-content: center;
     align-items: center;
     height: fit-content;
-    margin: 25px;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -29,72 +28,77 @@ body{
 }
 
 /* menu */
-
-.menuContainer {
-    width: 100%;
-    position: absolute;
+.navContainer{
     display: flex;
-    flex-direction: column;
+    align-items: center;
     background-color: #C28800;
-    height: 50px;
+    width: 100%;
+    height: 75px;
+}
+
+.menuContainer{
+    display: flex;
+    width: 100%;
 }
 
 .menuHamburguesa {
-    display: flex;
-    height: 20px;
-    justify-content: flex-end;
+    display: none;
 }
 
 .menu{
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content:space-evenly;    
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0px 0px; 
+    width: 100%;
+    height: 65px;
     background-color: #C28800;
-    padding: 1vw;        
     font-family: 'Gayathri', sans-serif;    
     color: #F9FFED;
-    font-size: 3vw;
-    list-style: none;
-    z-index: 10;
-}
-
-.menu.activated{
-    display: block;
+    list-style: none;     
 }
 
 .menu a {
-    color: #F9FFED;    
+    color: #F9FFED;
+    font-size: 40px; 
+    padding: 10px 0px 0px;     
 }
+
+/*first page*/
 
 .home{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #E9EFDE;
+    background-image: url("https://i.ibb.co/TDQZk6p/Fondo-Totoro.jpg");
+    background-size: cover;
+    height: 900px;
     width: 100%;
-    height: auto;
 }
 
- .aboutDescription {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     margin-top: 100px;
-     width: 100%;
- }
+.home img {
+    display: none;
+}
+
+.aboutDescription {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    justify-content: center;
+    width: 60%;
+}
 
 .aboutTitle{    
     color: #0D566D;    
     font-family: 'Gayathri', sans-serif; 
     font-size: 50px;
     height: 50px;
+    margin-left: 50px;
 }
 
 .aboutText{
     font-family: 'Gayathri', sans-serif;
-    font-size: 15px;
+    font-size: 25px;
     margin: 40px 50px 0;
 }
 
@@ -114,7 +118,7 @@ body{
     display: none;
     font-family: 'Gayathri', sans-serif;
     color: #0D566D;
-    font-size: 30px; 
+    font-size: 35px; 
     justify-content: space-around;   
     margin-top: 100px;
 }
@@ -130,6 +134,7 @@ body{
     flex-wrap: wrap;
     justify-content:space-evenly;
     text-align: center; 
+    margin-top: 50px;
 }
 
 .card_film {
@@ -139,7 +144,7 @@ body{
     flex-direction: column;
     margin: 20px;
     font-family: 'Gayathri', sans-serif;
-    width: 300px;
+    width: 400px;
     border-radius: 20px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
@@ -217,10 +222,12 @@ body{
     justify-content: center;
 }
 
+/* footer */
+
 footer{
     display:flex;    
     justify-content:space-around;
-    text-align: center;  
+    align-items: center;  
     height: 150px;
 }
 footer a {
@@ -229,86 +236,92 @@ footer a {
 .website{
     font-family: 'Gayathri', sans-serif;
     text-decoration: none;
-    background-color: #098ED6;     
-    padding-top: 0.8vw;
-    font-size: 1.5vw;   
-    height: 2vw; 
+    background-color: #098ED6; 
+    padding: 20px 15px 15px 15px;  
+    font-size: 25px;    
+    border-radius: 15px;
 }
 i{
-    font-size: 3vw;    
-    height: 2vw; 
+    font-size: 50px;    
 }
 
 
 
 /* For device width 990px and larger: */
-@media only screen and (min-device-width: 990px) {
+@media only screen and (max-device-width: 576px) {
     .haederContainer{
-        margin: 0;
+            margin: 25px;
     }
 
-    .haederContainer h1{
-        font-size: 80px;
-        height: 80px;
-        padding: 15px;
+   .haederContainer h1{
+    padding: 30px;
     }
-
-    .home{
-    width: 100%;
-    background-image: url("https://i.ibb.co/TDQZk6p/Fondo-Totoro.jpg");
-    background-size: cover;
-    height: 800px;
+    
+    .navContainer{
+        justify-content: flex-end;
+        position: relative;
     }
-
-    .home img {
-        display: none;
-    }
-
-    .menuContainer{
-        position:unset;
-    }
-    .menu{
-        width: 100%;
+    .menuContainer {
         position: absolute;
         display: flex;
-        flex-direction: row;    
-        justify-content:space-evenly;    
-        background-color: #C28800;
-        padding: 1vw;        
-        font-family: 'Gayathri', sans-serif;    
-        color: #F9FFED;
-        font-size: 3vw;
-        list-style: none;
-    }
-
-    .menu a {
-        color: #F9FFED;    
+        flex-direction: column;
+        top: 70px;
+        width: 100%;
+        height: fit-content;
+        z-index: 10;
     }
 
     .menuHamburguesa{
+        display: block;
+    }
+    .menuHamburguesa i{
+        font-size: 50px;
+        color: #F9FFED;
+        margin-right: 30px;
+    }
+
+
+
+    .menu{
         display: none;
-    }
-    .aboutDescription {
-        align-self: flex-start;
-        width: 60%;
+        flex-direction: column;
+        align-items: center;
+        height: auto; 
+        padding-bottom: 70px;   
     }
 
+    .menu.activated{
+        display: flex;
+    }
+
+    .menu a {
+        border-bottom: 2px solid #F9FFED;
+        line-height: 90px;
+        padding: 0;
+    }
+
+    .home{
+        background-color: #E9EFDE;
+        height: auto;
+    }
+
+    .home img {
+        display: flex;
+    }
+
+    .aboutDescription{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+        width: 100%;
+    }
     .aboutText{
-        font-size: 25px;
+        font-size: 15px;
     }
-
-    .films{
-        margin-top: 50px;
+    .films  {
+        margin-top: 0px;
     }
-    .selector{
-        padding-top: 50px;
-    }
-
     .card_film {
-        width: 400px;
+        width: 300px;
     }
-   
-
-
-
 }
