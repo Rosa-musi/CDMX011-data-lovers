@@ -4,25 +4,24 @@ export const maping = (data) => {
   let posters2 = []
 
   data.forEach(movie => {
-      posters2 += `
-      <div class="card_film"> 
-      <div class="frontFaceCard">
-        <div class="posterContainer">
-          <img src=${movie.poster} class= "posterimg" alt="${movie.title}">
-        </div>
-        <h2>${movie.title}</h2>
+    posters2 += `
+    <div class="card_film"> 
+      <div class="posterContainer">
+        <img src=${movie.poster} class= "posterimg" alt="${movie.title}">
+      </div>
+      <div class= "movie_info">
         <div class ="movieDate">
-          <p class="releaseDate"> Release date: <br> <span>${movie.release_date}</span></p>         
-          <p class = "rate"> Score: <br> <span>${movie.rt_score}</span></p>
-        </div>
+          <p class="releaseDate"> ${movie.release_date}</p>         
+          <p class = "rate"> Score: <span >${movie.rt_score}</span></p>
+        </div>    
+        <h2>${movie.title}</h2>        
+        <p class="director"> <span class="purpleText"> Director: </span> ${movie.director} </p>
+        <p class="producer"> <span class="purpleText"> Producer: </span> ${movie.producer} </p>
+        <p class="description"> ${movie.description} </p>
       </div>
-        <div class= "movie_info">
-          <p class="director"> Director: ${movie.director} </p>
-          <p class="producer"> Producer: ${movie.producer} </p>
-          <p class="description"> Description: ${movie.description} </p>
-        </div>
-      </div>
-      `
+    </div>  
+    `
+
   })
 
   return posters2
@@ -45,14 +44,19 @@ export const filterData = (data, option) => {
   return filterDirector;
 }
 
-export function peopleArray (data) {
+
+export const peopleArray = (data) => {
   let peopleArray = []
   for (let film of data) {
-      for (let people of film.people)
-      peopleArray.push(people);
+      const character = film.people.map(function (people){
+        people.movie = film.title
+        return people
+      })
+    peopleArray= peopleArray.concat(character)
   }
   return peopleArray
 }
+
 
 export const charactersCard = (data) => {
   let characters = []
@@ -60,12 +64,13 @@ export const charactersCard = (data) => {
   data.forEach(movie => {
       characters += `
       <div class="card_film"> 
-        <div class="frontFaceCard">
+        <div>
           <div class="posterContainer">
             <img src=${movie.img} class= "posterimg" alt="${movie.name}">
           </div>
           <h2>${movie.name}</h2>
           <div class ="movieDate">
+            <p class = "rate"> Movie: <br> <span>${movie.movie}</span></p>
             <p class="releaseDate"> Specie <br> <span>${movie.specie}</span></p>         
           </div>
         </div>
