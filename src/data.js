@@ -64,15 +64,15 @@ export const charactersCard = (data) => {
   data.forEach(movie => {
       characters += `
       <div class="card_character">         
-          <div class="photoContainer">
-            <img src=${movie.img} class= "photoimg" alt="${movie.name}">
+        <div class="photoContainer">
+          <img src=${movie.img} class= "photoimg" alt="${movie.name}">
+        </div>
+        <div class ="characterInfo">
+          <div class= "characterData">                   
+            <p class = "movie"> Movie: <br> <span>${movie.movie}</span></p>
+            <p class="Specie"> Specie <br> <span>${movie.specie}</span></p>         
           </div>
-          <div class ="characterInfo">
-            <div class= "characterData">                   
-              <p class = "movie"> Movie: <br> <span>${movie.movie}</span></p>
-              <p class="Specie"> Specie <br> <span>${movie.specie}</span></p>         
-            </div>
-            <h2 class="characterName">${movie.name}</h2>   
+          <h2 class="characterName">${movie.name}</h2>   
         </div>
       </div>
       `
