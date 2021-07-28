@@ -71,7 +71,6 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     background-image: url("https://i.ibb.co/TDQZk6p/Fondo-Totoro.jpg");
     background-size: cover;
     height: 900px;
@@ -88,6 +87,7 @@ body{
     align-self: flex-start;
     justify-content: center;
     width: 60%;
+    margin-top: 100px;
 }
 
 .aboutTitle{    
@@ -121,11 +121,26 @@ body{
     font-family: 'Gayathri', sans-serif;
     color: #0D566D;
     font-size: 35px; 
-    justify-content: space-around;   
+    justify-content: space-evenly;   
     margin-top: 100px;
 }
 
+select {
+    font-size: 25px;
+    border: none;
+    font-family: 'Gayathri', sans-serif;
+    box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.selector option {
+    font-size: 20px;
+}
+
 .sortMovie .filterMovies{
+    display: flex;
+    justify-content: center;
     box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2);
     font-family: 'Gayathri', sans-serif;
     font-size: 20px;
@@ -207,6 +222,7 @@ body{
 
 .movie_info p {
     margin-top: 15px;
+    font-size: 20px;
 }
 
 .purpleText{
@@ -373,6 +389,9 @@ footer i{
         margin-top: 0px;
         justify-content: center;
     }
+    .selector {
+        margin-left: 30px;
+    }
     .card_film {
         margin-left: 120px;
     }  
@@ -389,12 +408,12 @@ footer i{
     }
 
     .headerContainer h1{
-        font-size: 40px;
+        font-size: 70px;
         padding: 15px;
     }
 
     .navContainer{
-        height: 55px;
+        height: 70px;
     }
 
     .menuContainer {
@@ -412,11 +431,12 @@ footer i{
     .menu.activated{
         background-color: #C28800;   
         margin-top: -20px;
+        height: 300px;
     }
 
     .menu a {
-        font-size: 20px;
-        line-height: 30px;
+        font-size: 40px;
+        line-height: 40px;
     }
 
     .home img {
@@ -436,57 +456,61 @@ footer i{
     }
 
     .selector{
+        display: flex;
+        flex-direction: column;
         margin-bottom: 20px;
+    }
+
+    label {
+        margin: 20px;
+        font-size: 40px;
+    }
+
+    select {
+        font-size: 25px;
+    }
+
+    .selector option {
+        font-size: 18px;
     }
 
     .card_film{
         flex-direction: column;
-        height: 800px;
+        height: 1500px;
         margin-left: 0;
-        margin-top: 200px;
+        margin-top: 300px;
         display: flex;
         align-items: center;
     }
 
     .posterContainer{
-        height: 250px;
-        transform: translate(0, -150px)
+        height: 550px;
+        transform: translate(0, -250px)
     }
 
     .movie_info{
-        transform: translate(0, -120px);
-        width: 98%;
-        height: 1500px;
+        transform: translate(0, -130px);
+        width: 98%;        
         padding-bottom: 0; 
         display: flex;
         flex-direction: column;
-        align-items: center; 
-          
+        align-items: flex-start;
     }
+
 
     .movieDate{
         margin-bottom: 40px;
     }
     .movie_info p {
-        margin-top: 20px;
+        margin-top: 30px;
+        font-size: 35px;
     }
     .movieDate p {
-        font-size: 25px;
+        font-size: 45px;
     }
     .movie_info h2 {
-        font-size: 25px;
-    }
-
-    .movie_info .director  {
-        font-size: 20px;
-    }
-
-    .movie_info .producer  {
-        font-size: 20px;
-    }
-
-    .movie_info .description {
-        font-size: 18px;
+        font-size: 35px;
+        width: 100%;
     }
 
     .characters{
@@ -498,29 +522,34 @@ footer i{
         margin-bottom: 120px;
         margin-top: 80px;
         margin-left: 0px;
-        width: 80%;
-        height: 250px; 
+        width: 40%;
+        height: 450px; 
     }
     
     .photoContainer{
         max-width: 40%;
-        max-height: 80%;        
+        height: 80%;        
         transform: translate(0, -100px);
     }
 
     .characterInfo{
         transform: translate(0, -80px);
+        width: 100%;
     }
 
     .characterData{
-        font-size: 15px;
-        display: flex;        
-        justify-content: space-around;
+        
+        display: flex;
+        justify-content: space-evenly;     
+        margin-left: 40px;
+        font-size: 25px;   
+        padding: 20px;
     }
 
     .characterName{
         margin: 15px;
         text-align: center;
+        font-size: 30px;
     }
 
     .website{
