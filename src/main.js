@@ -84,5 +84,3 @@ characters_button.addEventListener('click', () => {
     let charactersPrint = charactersCard(arrayPeople)
     characters.innerHTML = charactersPrint
 })
-
-

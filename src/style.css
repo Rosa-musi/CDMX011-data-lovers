@@ -5,21 +5,23 @@
 	padding: 0;
 	list-style: none;
 	text-decoration: none;
+    box-sizing: border-box;
 }
 
 body{
     background-color: #E9EFDE;
 }
 
-.haederContainer {
+.headerContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     height: fit-content;
     font-family: 'Roboto', sans-serif;
+    margin: 30px;
 }
 
-.haederContainer h1{
+.headerContainer h1{
     color: #0D566D;      
     font-family: 'Gayathri', sans-serif;
     font-size: 80px;
@@ -169,7 +171,7 @@ body{
     justify-content: flex-start;
     align-items: center;
     transform: translateX(-65px);
-    width: 100%;    
+    width: 110%;    
     height: 72%;
     bottom: 0;
     overflow: auto;
@@ -219,6 +221,58 @@ body{
     justify-content: center;
 }
 
+.photoimg{
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.card_character{
+    width: 40%;
+    max-width: 1000px;
+    height: 300px;
+    background-color: #E9EFDE;
+    box-shadow: 8px 8px 4px 2px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+}
+
+.photoContainer{
+    min-width: 200px;
+    max-width: 300px;
+    height: 300px;
+    transform: translateX(-12px);
+    position: relative;
+    box-shadow: 8px 8px 4px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+}
+
+.characterData span{
+    color: #460C74;
+    margin: 8px 0;    
+}
+
+.movie .specie{
+    font-size: 30px;
+}
+.characterName{
+    margin: 20px 0 25px;
+    text-transform: uppercase;
+    color: #B46C01;
+}
+
+.characterInfo{
+    transform: translateX(50px);
+    width: 70%;
+    height: 100%;
+    transform:translateY(55px) ;
+    
+}
+
 /* footer */
 
 footer{
@@ -226,7 +280,7 @@ footer{
     justify-content:space-around;
     align-items: center;  
     height: 100px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 footer a {
     color: #F9FFED;
@@ -246,8 +300,8 @@ footer i{
 
 @media only screen and (max-device-width: 900px){
 
-    .haederContainer h1{
-        padding: 20px 0 15px;
+    .headerContainer h1{
+        padding: 20px 0 15px;        
     }
 
     .navContainer{
@@ -328,61 +382,88 @@ footer i{
 } 
 
 
-/* For device width 420px and smaller: */
-@media only screen and (max-device-width: 420px) {
+/* For device width 480px and smaller: */
+@media only screen and (max-device-width: 480px) {
     .haederContainer{
-        margin: 25px;
+        margin: 15px;        
+    }
+
+    .headerContainer h1{
+        font-size: 40px;
+        padding: 15px;
     }
 
     .navContainer{
-        height: 75px;
+        height: 55px;
     }
 
     .menuContainer {
-        top: 74px;
+        top: 76px;
+        background-color: #C28800;   
     }
     .menuHamburguesa i{
-        font-size: 50px;
+        font-size: 40px;
     }
 
     .menu{
-        padding: 40px 0px 70px;    
+        padding: 40px 0px 45px;         
     }
+    
+    .menu.activated{
+        background-color: #C28800;   
+        margin-top: -20px;
+    }
+
     .menu a {
-        font-size: 40px;
-        line-height: 90px;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .home img {
+        width: 80%;
+        margin: 0;
     }
 
     .aboutDescription{
-        margin-top: 100px;
+        margin-top: 80px;
     }
 
+    .aboutTitle{
+        font-size: 40px;
+    }
     .aboutText{
         font-size: 15px;
     }
 
     .selector{
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
     .card_film{
         flex-direction: column;
-        height: 1400px;
+        height: 800px;
         margin-left: 0;
-        margin-top: 300px;
+        margin-top: 200px;
+        display: flex;
+        align-items: center;
     }
 
     .posterContainer{
-        height: 600px;
-        transform: translate(0, -250px)
+        height: 250px;
+        transform: translate(0, -150px)
     }
 
     .movie_info{
-        transform: translate(0, -150px);
-        width: 80%;
-        height: 1500PX;
-        padding-bottom: 0;
+        transform: translate(0, -120px);
+        width: 98%;
+        height: 1500px;
+        padding-bottom: 0; 
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+          
     }
+
     .movieDate{
         margin-bottom: 40px;
     }
@@ -390,22 +471,66 @@ footer i{
         margin-top: 20px;
     }
     .movieDate p {
-        font-size: 45px;
+        font-size: 25px;
     }
     .movie_info h2 {
-        font-size: 45px;
+        font-size: 25px;
     }
 
     .movie_info .director  {
-        font-size: 40px;
+        font-size: 20px;
     }
 
     .movie_info .producer  {
-        font-size: 40px;
+        font-size: 20px;
     }
 
     .movie_info .description {
-        font-size: 38px;
+        font-size: 18px;
+    }
+
+    .characters{
+        justify-content: space-evenly;
+    }
+
+    .card_character{
+        flex-direction: column;        
+        margin-bottom: 120px;
+        margin-top: 80px;
+        margin-left: 0px;
+        width: 80%;
+        height: 250px; 
+    }
+    
+    .photoContainer{
+        max-width: 40%;
+        max-height: 80%;        
+        transform: translate(0, -100px);
+    }
+
+    .characterInfo{
+        transform: translate(0, -80px);
+    }
+
+    .characterData{
+        font-size: 15px;
+        display: flex;        
+        justify-content: space-around;
+    }
+
+    .characterName{
+        margin: 15px;
+        text-align: center;
+    }
+
+    .website{
+        font-size: 12px;
+        padding: 10px 8px 8px 8px;  
+        text-align: center;
+    }
+
+    .selector {
+        font-size: 20px;
     }
 
 }

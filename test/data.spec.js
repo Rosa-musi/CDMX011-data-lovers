@@ -1,6 +1,8 @@
-import { maping, sortAscending, sortDescending, sortAphabetic, sortWorst, filterData } from '../src/data.js';
 
-/* , filterData, peopleArray, charactersCard */
+import { maping, sortAscending, sortDescending, sortAphabetic, sortWorst, filterData, peopleArray, charactersCard } from '../src/data.js';
+
+/*  peopleArray, charactersCard */
+
 
 
 const movies = [
@@ -28,7 +30,7 @@ const movies = [
   {
     "title": "The Cat Returns",
     "release_date": "2002",
-      "rt_score": "89",
+    "rt_score": "89",
     "director": "Hiroyuki Morita",
     "description": "Haru, a schoolgirl bored by her ordinary routine, saves the life of an unusual cat and suddenly her world is transformed beyond anything she ever imagined. The Cat King rewards her good deed with a flurry of presents, including a very shocking proposal of marriage to his son! Haru embarks on an unexpected journey to the Kingdom of Cats where her eyes are opened to a whole other world."    
   },   
@@ -159,13 +161,51 @@ describe('filterData', () => {
   });
 
   it('returns director s movies selected', () => {
-    expect(filterData(movies, "Hiroyuki Morita")).toStrictEqual([{
-      "title": "The Cat Returns",
-      "release_date": "2002",
-        "rt_score": "89",
-      "director": "Hiroyuki Morita",
-      "description": "Haru, a schoolgirl bored by her ordinary routine, saves the life of an unusual cat and suddenly her world is transformed beyond anything she ever imagined. The Cat King rewards her good deed with a flurry of presents, including a very shocking proposal of marriage to his son! Haru embarks on an unexpected journey to the Kingdom of Cats where her eyes are opened to a whole other world."    
-    }])
-  }) 
+   expect(filterData(movies, "Hiroyuki Morita")).toStrictEqual([{
+    "title": "The Cat Returns",
+    "release_date": "2002",
+    "rt_score": "89",
+    "director": "Hiroyuki Morita",
+    "description": "Haru, a schoolgirl bored by her ordinary routine, saves the life of an unusual cat and suddenly her world is transformed beyond anything she ever imagined. The Cat King rewards her good deed with a flurry of presents, including a very shocking proposal of marriage to his son! Haru embarks on an unexpected journey to the Kingdom of Cats where her eyes are opened to a whole other world."    
+  }])
+  });
+});
+
+describe('peopleArray', () => {
+  it('is a function', () => {
+    expect(typeof peopleArray).toBe('function');
+  });
+});
+
+describe('charactersCard', () => {
+  it('is a function', () => {
+    expect(typeof charactersCard).toBe('function');
+  });
+  it('returns an array sorted by worst to best', () => {
+   const expected = sortWorst(movies);
+   expect(parseInt(expected[0].rt_score)).toBe(41);
+   expect(parseInt(expected[1].rt_score)).toBe(89);
+   expect(parseInt(expected[2].rt_score)).toBe(91);
+   expect(parseInt(expected[3].rt_score)).toBe(95);
+   expect(parseInt(expected[4].rt_score)).toBe(95);
+   expect(parseInt(expected[5].rt_score)).toBe(97);
+ });
+});
+
+describe('filterData', () => {
+  it('is a function', () => {
+   expect(typeof filterData).toBe('function');
+  });
+
+  it('returns director s movies selected', () => {
+   expect(filterData(movies, "Hiroyuki Morita")).toStrictEqual([{
+    "title": "The Cat Returns",
+    "release_date": "2002",
+      "rt_score": "89",
+    "director": "Hiroyuki Morita",
+    "description": "Haru, a schoolgirl bored by her ordinary routine, saves the life of an unusual cat and suddenly her world is transformed beyond anything she ever imagined. The Cat King rewards her good deed with a flurry of presents, including a very shocking proposal of marriage to his son! Haru embarks on an unexpected journey to the Kingdom of Cats where her eyes are opened to a whole other world."    
+  }])
+
+  });
 
 })
