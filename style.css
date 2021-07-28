@@ -253,8 +253,8 @@ select {
     display: flex;
     align-items: center;
     border-radius: 12px;
-    margin-bottom: 40px;
-    margin-left: 20px;
+    margin: 20px 30px 40px;
+    
 }
 
 .photoContainer{
@@ -267,18 +267,20 @@ select {
     border-radius: 12px;
 }
 
+.characterData{
+    font-size: 25px;
+}
+
 .characterData span{
     color: #460C74;
     margin: 8px 0;    
 }
 
-.movie .specie{
-    font-size: 30px;
-}
 .characterName{
     margin: 20px 0 25px;
     text-transform: uppercase;
     color: #B46C01;
+    font-size: 30px;
 }
 
 .characterInfo{
@@ -456,7 +458,7 @@ footer i{
     }
 
     .selector{
-        display: flex;
+        display: none;
         flex-direction: column;
         margin-bottom: 20px;
     }
@@ -551,15 +553,4 @@ footer i{
         text-align: center;
         font-size: 30px;
     }
-
-    .website{
-        font-size: 12px;
-        padding: 10px 8px 8px 8px;  
-        text-align: center;
-    }
-
-    .selector {
-        font-size: 20px;
-    }
-
 }
