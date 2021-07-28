@@ -10,7 +10,7 @@
   </head>
   <body>
     <header> 
-      <div class="haederContainer">
+      <div class="headerContainer">
         <h1>Ghibli World</h1>
       </div>
       <nav>
@@ -32,17 +32,23 @@
           <h2 class="aboutTitle">About Studio Ghibli</h2>
           <p class="aboutText">It is a Japanese animation film studio headquartered in Koganei, Tokyo. Founded in 1985 by animators and directors Miyazaki Hayao and Takahata Isao and producer Suzuki Toshio. Studio Ghibli is known for the high quality of its filmmaking and its artistry. Its feature films won both critical and popular praise and influenced other animation studios.</p>
         </div>
-        <img src="https://i.ibb.co/Z6pC2gS/pngwing-com.png" alt="Totoro and friends" border="0">
+        <img src="https://i.ibb.co/Z6pC2gS/pngwing-com.png" class="totoroFriends" alt="Totoro and friends" border="0">
       </div>
       <div class= "secondPage">
         <div class = "selector" id = "selector">
           <label>Sort movies by:
           <select name="sortMovies" class="sortMovies">
             <option selected disabled>Choose sort order</option>
-            <option value="alphabetic">Alphabetic Order</option>
-            <option value="releaseAscending">Release Date (Ascending)</option>
-            <option value="releaseDescending">Release Date (Descending)</option>
-            <option value="score">Worst to Best rated</option>
+            <optgroup label="Alphabetic">
+              <option value="alphabetic">Alphabetic Order</option>
+            </optgroup>
+            <optgroup label="Release Date">
+              <option value="releaseAscending">Release Date (Ascending)</option>
+              <option value="releaseDescending">Release Date (Descending)</option>
+            </optgroup>
+            <optgroup label="Score">
+              <option value="score">Worst to Best rated</option>
+            </optgroup>
           </select> 
           </label>      
           <label>Filter by film director:
