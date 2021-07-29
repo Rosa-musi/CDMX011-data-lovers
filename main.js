@@ -1,4 +1,4 @@
-import { maping, sortAscending, sortDescending, sortAphabetic, sortWorst, filterData, peopleArray, charactersCard } from './data.js';
+import { maping, sortAscending, sortDescending, sortAphabetic, sortWorst, filterData, peopleArray, charactersCard, filterDataCharacters } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/ghibli/ghibli.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -10,7 +10,8 @@ const movies_button = document.getElementById('movies_button');
 const home = document.getElementById('home')
 const home_button = document.getElementById('home_button')
 const selector = document.getElementById('selector')
-const characters = document.getElementById('characters')
+const characters = document.getElementById('thirdPage')
+const charactersDiv = document.getElementById('characters')
 const characters_button = document.getElementById('characters_button')
 const menuHamburguesa = document.getElementById('menuHamburguesa')
 const menu = document.getElementById('menu')
@@ -82,5 +83,22 @@ characters_button.addEventListener('click', () => {
     characters.style.display = "flex"
     let arrayPeople = peopleArray(data_films)
     let charactersPrint = charactersCard(arrayPeople)
-    characters.innerHTML = charactersPrint
+    charactersDiv.innerHTML = charactersPrint
+
+    const filterCharacters = document.querySelector('.filterCharacters')
+    filterCharacters.addEventListener('change', (event) => {
+        if(event.target.value != "all"){        
+            filterSort = filterDataCharacters(arrayPeople, event.target.value)
+            let filtered = charactersCard(filterSort)
+            charactersDiv.innerHTML = filtered
+        } else {
+            charactersDiv.innerHTML = charactersCard(arrayPeople)
+            console.log(charactersCard(arrayPeople))
+        }
+    })
+
+
 })
+
+
+

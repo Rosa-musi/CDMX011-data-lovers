@@ -44,6 +44,11 @@ export const filterData = (data, option) => {
   return filterDirector;
 }
 
+export const filterDataCharacters = (data, option) => {
+  const filterCharacters = data.filter((movie => movie.movie === option));
+  return filterCharacters;
+}
+
 
 export const peopleArray = (data) => {
   let peopleArray = []

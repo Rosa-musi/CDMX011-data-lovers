@@ -116,7 +116,7 @@ body{
 }
 
 
-.selector {
+.selector  {
     display: none;
     font-family: 'Gayathri', sans-serif;
     color: #0D566D;
@@ -138,7 +138,7 @@ select {
     font-size: 20px;
 }
 
-.sortMovie .filterMovies{
+.sortMovie .filterMovies {
     display: flex;
     justify-content: center;
     box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2);
@@ -228,11 +228,47 @@ select {
 .purpleText{
     color: #460C74;
     font-weight: bolder;
+    justify-content: center;
+}
+
+/*Characters page*/
+
+.thirdPage {
+    display: none;
+    flex-wrap: wrap;
+}
+
+.selectorCharacters {
+    display: flex;
+    font-family: 'Gayathri', sans-serif;
+    color: #0D566D;
+    font-size: 35px; 
+    margin-bottom: 80px;
+    margin-left: 80px;
+}
+
+ .selectorCharacters select {
+    font-size: 25px;
+    border: none;
+    font-family: 'Gayathri', sans-serif;
+    box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.selectorCharacters option {
+    font-size: 20px;
+}
+
+.filterCharacters {
+    box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2);
+    font-family: 'Gayathri', sans-serif;
+    font-size: 20px;
 }
 
 
 .characters {
-    display: none;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -463,12 +499,12 @@ footer i{
         margin-bottom: 20px;
     }
 
-    label {
+    .selector label {
         margin: 20px;
         font-size: 40px;
     }
 
-    select {
+    .selector select {
         font-size: 25px;
     }
 
@@ -515,6 +551,22 @@ footer i{
         width: 100%;
     }
 
+    .selectorCharacters{
+        margin-bottom: 100px;
+    }
+
+    .selectorCharacters label {
+        margin: 20px;
+        font-size: 40px;
+    }
+
+    .selectorCharacters select {
+        font-size: 25px;
+    }
+
+    .selectorCharacters option {
+        font-size: 18px;
+    }
     .characters{
         justify-content: space-evenly;
     }
