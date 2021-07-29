@@ -1,5 +1,5 @@
 
-import { maping, sortAscending, sortDescending, sortAphabetic, sortWorst, filterData, peopleArray, charactersCard } from '../src/data.js';
+import { maping, sortAscending, sortDescending, sortAphabetic, sortWorst, filterData, peopleArray, charactersCard, filterDataCharacters } from '../src/data.js';
 
 /*  peopleArray, charactersCard */
 
@@ -50,6 +50,36 @@ const movies = [
   }
 ] 
 
+const characters = [
+  {
+    "name": "Pazu",
+    "specie": "Human",
+    "movie": "Castle in the Sky"
+  },
+  {
+    "name": "Satsuki Kusakabe",
+    "specie": "Human",
+    "movie": "My Neighbor Totoro"
+  },
+  {
+    "name": "Kiki",
+    "specie": "Witch",
+    "movie": "Kiki's Delivery Service"
+  },
+  {
+    "name": "Seita Yokokawa",
+    "specie": "Human",
+    "movie": "Grave of the Fireflies"
+  },
+  {
+    "name": "Taeko Okajima",
+    "specie": "Human",
+    "movie": "Only Yesterday"
+  }
+    
+    
+
+]
 // const sortReleaseDate = [
 //   {
 //     "release_date": "1986"
@@ -59,7 +89,7 @@ const movies = [
 //   },
 //   {
 //     "release_date": "1995"
-//   },
+//   },  
 //   {
 //     "release_date": "2002"
 //   },   
@@ -192,18 +222,16 @@ describe('charactersCard', () => {
  });
 });
 
-describe('filterData', () => {
+describe('filterDataCharacters', () => {
   it('is a function', () => {
-   expect(typeof filterData).toBe('function');
+   expect(typeof filterDataCharacters).toBe('function');
   });
 
-  it('returns director s movies selected', () => {
-   expect(filterData(movies, "Hiroyuki Morita")).toStrictEqual([{
-    "title": "The Cat Returns",
-    "release_date": "2002",
-      "rt_score": "89",
-    "director": "Hiroyuki Morita",
-    "description": "Haru, a schoolgirl bored by her ordinary routine, saves the life of an unusual cat and suddenly her world is transformed beyond anything she ever imagined. The Cat King rewards her good deed with a flurry of presents, including a very shocking proposal of marriage to his son! Haru embarks on an unexpected journey to the Kingdom of Cats where her eyes are opened to a whole other world."    
+  it('returns character s movie selected', () => {
+   expect(filterDataCharacters(characters, "My Neighbor Totoro")).toStrictEqual([{
+    "name": "Satsuki Kusakabe",
+    "specie": "Human",
+    "movie": "My Neighbor Totoro"
   }])
 
   });
