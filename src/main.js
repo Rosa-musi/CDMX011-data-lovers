@@ -16,6 +16,7 @@ const menuHamburguesa = document.getElementById('menuHamburguesa')
 const menu = document.getElementById('menu')
 
 
+
 let dataFetchVar
 
 async function dataFetch() {

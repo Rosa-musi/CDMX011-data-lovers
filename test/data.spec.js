@@ -80,43 +80,7 @@ const characters = [
     
 
 ]
-// const sortReleaseDate = [
-//   {
-//     "release_date": "1986"
-//   },
-//   {
-//     "release_date": "1988"
-//   },
-//   {
-//     "release_date": "1995"
-//   },  
-//   {
-//     "release_date": "2002"
-//   },   
-//   {
-//     "release_date": "2006"
-//   },
-//   {
-//     "release_date": "2010"
-//   }
-// ]
 
-/* const moviesScore = [
-  { "rt_score": "95" },
-  { "rt_score": "97" },
-  { "rt_score": "91" },
-  { "rt_score": "89" },
-  { "rt_score": "41" }
-] */
-
-/* const moviesTitle = [
-  { "title": "Castle in the Sky" },
-  { "title": "Grave of the Fireflies" },
-  { "title": "Whisper of the Heart" },
-  { "title": "The Cat Returns" },   
-  { "title": "Tales from Earthsea" },
-  { "title": "The Secret World of Arrietty" }
-] */
 
 
 describe('maping', () => {
