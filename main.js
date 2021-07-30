@@ -1,11 +1,10 @@
 import { maping, sortAscending, sortDescending, sortAphabetic, sortWorst, filterData, peopleArray, charactersCard, filterDataCharacters } from './data.js';
-// import data from './data/lol/lol.js';
-import data from './data/ghibli/ghibli.js';
-// import data from './data/rickandmorty/rickandmorty.js';
 
-let films = document.getElementById('films')
+import data from './data/ghibli/ghibli.js';
+
 let data_films = data.films
 let filterSort = data_films
+let films = document.getElementById('films')
 const movies_button = document.getElementById('movies_button');
 const home = document.getElementById('home')
 const home_button = document.getElementById('home_button')
@@ -17,10 +16,27 @@ const menuHamburguesa = document.getElementById('menuHamburguesa')
 const menu = document.getElementById('menu')
 
 
+let dataFetchVar
+
+async function dataFetch() {
+    const url = './data/ghibli/ghibli.json'; 
+    const response = await fetch(url); 
+    let result = await response.json();     
+    console.log(result)    
+    return result  
+} 
+
+dataFetchVar = dataFetch()
+
+console.log(dataFetchVar)
+
+
+
 
 menuHamburguesa.addEventListener('click', () =>{
     menu.classList.toggle('activated')
 })
+
 
 
 home_button.addEventListener('click', () => {
@@ -76,29 +92,26 @@ filterSelect.addEventListener('change', (event) => {
     }
 })
 
+
+let arrayPeople = peopleArray(data_films)
+
 characters_button.addEventListener('click', () => {
     home.style.display = "none";
     films.style.display = "none";
     selector.style.display = "none";
     characters.style.display = "flex"
-    let arrayPeople = peopleArray(data_films)
     let charactersPrint = charactersCard(arrayPeople)
     charactersDiv.innerHTML = charactersPrint
-
-    const filterCharacters = document.querySelector('.filterCharacters')
-    filterCharacters.addEventListener('change', (event) => {
-        if(event.target.value != "all"){        
-            filterSort = filterDataCharacters(arrayPeople, event.target.value)
-            let filtered = charactersCard(filterSort)
-            charactersDiv.innerHTML = filtered
-        } else {
-            charactersDiv.innerHTML = charactersCard(arrayPeople)
-            console.log(charactersCard(arrayPeople))
-        }
-    })
-
-
 })
 
-
+const filterCharacters = document.querySelector('.filterCharacters')
+filterCharacters.addEventListener('change', (event) => {
+    if(event.target.value != "all"){        
+        let filter = filterDataCharacters(arrayPeople, event.target.value)
+        let filtered = charactersCard(filter)
+        charactersDiv.innerHTML = filtered
+    } else {
+        charactersDiv.innerHTML = charactersCard(arrayPeople)
+    }
+})
 
