@@ -1,4 +1,5 @@
-import { maping, sortAscending, sortDescending, sortAphabetic, sortWorst, filterData, peopleArray, charactersCard, filterDataCharacters } from './data.js';
+import { maping, sortAscending, sortDescending, sortAphabetic, sortWorst, filterData, peopleArray, charactersCard, filterDataCharacters, score, computeStats } from './data.js';
+
 
 import data from './data/ghibli/ghibli.js';
 
@@ -14,37 +15,23 @@ const charactersDiv = document.getElementById('characters')
 const characters_button = document.getElementById('characters_button')
 const menuHamburguesa = document.getElementById('menuHamburguesa')
 const menu = document.getElementById('menu')
-
-
-
-let dataFetchVar
-
-async function dataFetch() {
-    const url = './data/ghibli/ghibli.json'; 
-    const response = await fetch(url); 
-    let result = await response.json();     
-    console.log(result)    
-    return result  
-} 
-
-dataFetchVar = dataFetch()
-
-console.log(dataFetchVar)
+const averageResult = document.getElementById('averageResult');
 
 
 
 
 menuHamburguesa.addEventListener('click', () =>{
-    menu.classList.toggle('activated')
+    menu.classList.toggle('activated');
 })
-
 
 
 home_button.addEventListener('click', () => {
     home.style.display = "flex";
     films.style.display = "none";
     selector.style.display = "none";
-    characters.style.display = "none"
+    characters.style.display = "none";
+    menu.classList.toggle('activated');
+
 })
 
 
@@ -56,6 +43,7 @@ movies_button.addEventListener('click', () => {
     films.style.display = "flex";
     selector.style.display = "flex";
     characters.style.display = "none"
+    menu.classList.toggle('activated');
 })
 
 
@@ -103,6 +91,7 @@ characters_button.addEventListener('click', () => {
     characters.style.display = "flex"
     let charactersPrint = charactersCard(arrayPeople)
     charactersDiv.innerHTML = charactersPrint
+    menu.classList.toggle('activated');
 })
 
 const filterCharacters = document.querySelector('.filterCharacters')
@@ -116,3 +105,5 @@ filterCharacters.addEventListener('change', (event) => {
     }
 })
 
+let scoreArray = score(data_films);
+averageResult.innerHTML = computeStats(scoreArray);
