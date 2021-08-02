@@ -104,6 +104,17 @@ body{
     margin: 40px 50px 0;
 }
 
+.scoreAverage{
+    font-family: 'Gayathri', sans-serif;
+    font-size: 25px;
+    margin: 40px 50px 0;
+}
+
+.scoreAverage span{
+    font-size: 40px;
+    color: #007219;    
+}
+
 .home img {
     margin-bottom: 100px;
     
