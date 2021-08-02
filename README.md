@@ -255,7 +255,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 * [x] Incluye link a Zeplin en `README.md.`
 * [x] Incluye el listado de problemas que detectaste a través de tests de
   usabilidad en el `README.md.`
-* [ ] UI: Muestra lista y/o tabla con datos y/o indicadores.
+* [x] UI: Muestra lista y/o tabla con datos y/o indicadores.
 * [x] UI: Permite ordenar data por uno o más campos (asc y desc).
 * [x] UI: Permite filtrar data en base a una condición.
 * [x] UI: Es _responsive_.
