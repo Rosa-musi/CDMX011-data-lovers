@@ -5,17 +5,23 @@ import data from './data/ghibli/ghibli.js';
 
 let data_films = data.films
 let filterSort = data_films
-let films = document.getElementById('films')
-const movies_button = document.getElementById('movies_button');
+const menu = document.getElementById('menu')
+const menuHamburguesa = document.getElementById('menuHamburguesa')
 const home = document.getElementById('home')
 const home_button = document.getElementById('home_button')
-const selector = document.getElementById('selector')
-const characters = document.getElementById('thirdPage')
-const charactersDiv = document.getElementById('characters')
-const characters_button = document.getElementById('characters_button')
-const menuHamburguesa = document.getElementById('menuHamburguesa')
-const menu = document.getElementById('menu')
 const averageResult = document.getElementById('averageResult');
+const films = document.getElementById('films')
+const movies_button = document.getElementById('movies_button');
+const sortSelect = document.querySelector('.sortMovies')
+const filterSelect = document.querySelector('.filterMovies')
+const selector = document.getElementById('selector')
+//const thirdPage = document.getElementById('thirdPage')
+const characters_button = document.getElementById('characters_button')
+const characters = document.getElementById('characters')
+const filterCharacters = document.querySelector('.filterCharacters')
+
+
+
 
 
 
@@ -29,11 +35,13 @@ home_button.addEventListener('click', () => {
     home.style.display = "flex";
     films.style.display = "none";
     selector.style.display = "none";
+    filterCharacters.style.display = "none";
     characters.style.display = "none";
     menu.classList.toggle('activated');
-
 })
 
+let scoreArray = score(data_films);
+averageResult.innerHTML = computeStats(scoreArray);
 
 
 movies_button.addEventListener('click', () => {
@@ -42,12 +50,13 @@ movies_button.addEventListener('click', () => {
     home.style.display = "none";
     films.style.display = "flex";
     selector.style.display = "flex";
-    characters.style.display = "none"
+    filterCharacters.style.display = "none";
+    characters.style.display = "none";
     menu.classList.toggle('activated');
 })
 
 
-const sortSelect = document.querySelector('.sortMovies')
+
 sortSelect.addEventListener('change', (e) => {
     if (e.target.value === "alphabetic"){
         let sort = sortAphabetic(filterSort)
@@ -69,7 +78,7 @@ sortSelect.addEventListener('change', (e) => {
     }
 })
 
-const filterSelect = document.querySelector('.filterMovies')
+
 filterSelect.addEventListener('change', (event) => {
     if(event.target.value != "all"){        
         filterSort = filterData(data_films, event.target.value)
@@ -88,22 +97,22 @@ characters_button.addEventListener('click', () => {
     home.style.display = "none";
     films.style.display = "none";
     selector.style.display = "none";
-    characters.style.display = "flex"
+    filterCharacters.style.display = "flex";
+    characters.style.display = "flex";
     let charactersPrint = charactersCard(arrayPeople)
-    charactersDiv.innerHTML = charactersPrint
+    characters.innerHTML = charactersPrint
     menu.classList.toggle('activated');
 })
 
-const filterCharacters = document.querySelector('.filterCharacters')
+
 filterCharacters.addEventListener('change', (event) => {
     if(event.target.value != "all"){        
         let filter = filterDataCharacters(arrayPeople, event.target.value)
         let filtered = charactersCard(filter)
-        charactersDiv.innerHTML = filtered
+        characters.innerHTML = filtered
     } else {
-        charactersDiv.innerHTML = charactersCard(arrayPeople)
+        characters.innerHTML = charactersCard(arrayPeople)
     }
 })
 
-let scoreArray = score(data_films);
-averageResult.innerHTML = computeStats(scoreArray);
+

@@ -32,7 +32,7 @@ export const maping = (data) => {
 
 const sortData = (data) => data.sort((a, b) => a.release_date > b.release_date ? 1 : -1)
 export let sortAscending = (data) => sortData(data);
-export const sortDescending = (data) => sortAscending(data).reverse();
+export const sortDescending = (data) => sortAscending(data).reverse(); 
 
 export const sortAphabetic = (data) => data.sort((a,b) => a.title > b.title ? 1 : -1);
 

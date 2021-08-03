@@ -1228,7 +1228,7 @@ export default {
         },
         {
           "id": "a1143897-679f-4c16-8b20-538976c144d6",
-          "name": "Nigihayami Kohakunushi/Haku",
+          "name": "Nigihayami Kohakunushi /Haku",
           "img": "https://static.wikia.nocookie.net/studio-ghibli/images/8/89/Haku-2.png",
           "gender": "Male",
           "age": "12 (in appearance)",
