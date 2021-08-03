@@ -245,8 +245,10 @@ select {
 /*Characters page*/
 
 .thirdPage {
-    display: none;
+    display: flex;
     flex-wrap: wrap;
+    width: 100%;
+    
 }
 
 .selectorCharacters {
@@ -281,7 +283,9 @@ select {
 .characters {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    margin-left:10vw;
+    width: 100%;
+ 
 }
 
 .photoimg{
@@ -293,7 +297,6 @@ select {
 
 .card_character{
     width: 40%;
-    max-width: 1000px;
     height: 300px;
     background-color: #E9EFDE;
     box-shadow: 8px 8px 4px 2px rgba(0, 0, 0, 0.25);
@@ -301,14 +304,12 @@ select {
     align-items: center;
     border-radius: 12px;
     margin: 20px 30px 40px;
-    
 }
 
 .photoContainer{
-    min-width: 200px;
-    max-width: 300px;
-    height: 300px;
-    transform: translateX(-12px);
+    width: 50%;
+    height: 80%;
+    transform: translateX(-22px); 
     position: relative;
     box-shadow: 8px 8px 4px 2px rgba(0, 0, 0, 0.25);
     border-radius: 12px;
@@ -346,6 +347,7 @@ footer{
     align-items: center;  
     height: 100px;
     margin-bottom: 10px;
+    width: 100%;
 }
 footer a {
     color: #F9FFED;
@@ -364,6 +366,7 @@ footer i{
 
 
 @media only screen and (max-device-width: 900px){
+
 
     .headerContainer h1{
         padding: 20px 0 15px;        
@@ -447,6 +450,20 @@ footer i{
     .description{
         font-size: 22px;
     }
+
+    .photoContainer{
+        height: 250px;
+        width: 200px;
+    }
+
+    .thirdPage{
+        flex-direction: column;
+    }
+    .characters {
+        margin-left: 0;
+    }
+
+
 } 
 
 
